@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: Confirm that all colors here are found in tailwind config */
+
+@layer base {
+  :root {
+    --foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --background: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --muted: 240 5% 96%; /* hsl(240, 5%, 96%) */
+    --muted-foreground: 240 4% 46%; /* hsl(240, 4%, 46%) */
+    --card: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --card-foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --popover: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --popover-foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --border: 240 6% 90%; /* hsl(240, 6%, 90%) */
+    --input: 240 6% 90%; /* hsl(240, 6%, 90%) */
+    --primary-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --primary: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --secondary: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --secondary-foreground: 240 4% 16%; /* hsl(240, 4%, 16%) */
+    --accent: 240 5% 96%; /* hsl(240, 5%, 96%) */
+    --accent-foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --destructive: 0 72% 51%; /* hsl(0, 72%, 51%) */
+    --destructive-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --ring: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --primary-hover: 240 4% 16%; /* hsl(240, 4%, 16%) */
+    --secondary-hover: 240 6% 90%; /* hsl(240, 6%, 90%) */
+    --placeholder-foreground: 240 5% 65%; /* hsl(240, 5%, 65%) */
+    --canvas: 240 5% 96%; /* hsl(240, 5%, 96%) */
+    --accent-emerald: 149 80% 90%; /* hsl(149, 80%, 90%) */
+    --accent-emerald-foreground: 161 41% 30%; /* hsl(161, 41%, 30%) */
+    --accent-indigo: 226 100% 94%; /* hsl(226, 100%, 94%) */
+    --accent-indigo-foreground: 243 75% 59%; /* hsl(243, 75%, 59%) */
+    --accent-pink: 326 78% 95%; /* hsl(326, 78%, 95%) */
+    --accent-pink-foreground: 333 71% 51%; /* hsl(333, 71%, 51%) */
+    --note-amber: 48 97% 77%; /* hsl(48, 97%, 77%) */
+    --tooltip: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --tooltip-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+
+    --node-selected: 243 75% 59%;
+    --round-btn-shadow: #00000063;
+    --ice: #31a3cc;
+    --selected: #2196f3;
+
+    --error-background: #fef2f2;
+    --error-foreground: #991b1b;
+    --error: #991b1b;
+
+    --success-background: #f0fdf4;
+    --success-foreground: #14532d;
+
+    --info-background: #f0f4fd;
+    --info-foreground: #141653;
+
+    --high-indigo: #4338ca;
+    --medium-indigo: #6366f1;
+    --low-indigo: #e0e7ff;
+
+    --beta-background: rgb(219 234 254);
+    --beta-foreground: rgb(37 99 235);
+    --beta-foreground-soft: rgb(37 99 235 / 80%);
+
+    --chat-bot-icon: #afe6ef;
+    --chat-user-icon: #aface9;
+
+    --component-icon: #d8598a;
+    --flow-icon: #2f67d0;
+    --hover: #f2f4f5;
+    --disabled-run: #6366f1;
+
+    --filter-foreground: #4f46e5;
+    --filter-background: #eef2ff;
+    /* Colors that are shared in dark and light mode */
+    --blur-shared: #151923de;
+    --build-trigger: #dc735b;
+    --chat-trigger: #5c8be1;
+    --chat-trigger-disabled: #b4c3da;
+    --status-red: #ef4444;
+    --status-yellow: #eab308;
+    --chat-send: #000000;
+    --status-green: #4ade80;
+    --status-blue: #2563eb;
+    --status-gray: #6b7280;
+    --connection: #555;
+    --note-default: #f1f5f9;
+    --note-indigo: #e0e7ff;
+    --note-emerald: #d1fae5;
+    --note-red: #fee2e2;
+
+    --note-default-opacity: #f1f5f980;
+    --note-indigo-opacity: #312e8180;
+    --note-emerald-opacity: #064e3b80;
+    --note-amber-opacity: #78350f80;
+    --note-red-opacity: #7f1d1d80;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --background: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --muted: 240 4% 16%; /* hsl(240, 4%, 16%) */
+    --muted-foreground: 240 5% 65%; /* hsl(240, 5%, 65%) */
+    --card: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --card-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --popover: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --popover-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --border: 240 4% 16%; /* hsl(240, 4%, 16%) */
+    --input: 240 5% 26%; /* hsl(240, 5%, 26%) */
+    --primary-foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --primary: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --secondary: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --secondary-foreground: 240 6% 90%; /* hsl(240, 6%, 90%) */
+    --accent: 240 6% 10%; /* hsl(240, 6%, 10%) */
+    --accent-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --destructive: 0 84% 60%; /* hsl(0, 84%, 60%) */
+    --destructive-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --ring: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --primary-hover: 240 6% 90%; /* hsl(240, 6%, 90%) */
+    --secondary-hover: 240 4% 16%; /* hsl(240, 4%, 16%) */
+    --placeholder-foreground: 240 4% 46%; /* hsl(240, 4%, 46%) */
+    --canvas: 240 6% 10%; /* hsl(240, 6%, 10%) */
+    --accent-emerald: 164 86% 16%; /* hsl(164, 86%, 16%) */
+    --accent-emerald-foreground: 158 64% 52%; /* hsl(158, 64%, 52%) */
+    --accent-indigo: 242 25% 34%; /* hsl(242, 25%, 34%) */
+    --accent-indigo-foreground: 234 89% 74%; /* hsl(234, 89%, 74%) */
+    --accent-pink: 336 30% 30%; /* hsl(336, 30%, 30%) */
+    --accent-pink-foreground: 329 86% 70%; /* hsl(329, 86%, 70%) */
+    --note-amber: 46 97% 65%; /* hsl(46, 97%, 65%) */
+    --tooltip: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --tooltip-foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
+
+    --note-default: #0f172a;
+    --note-indigo: #312e81;
+    --note-emerald: #064e3b;
+    --note-red: #7f1d1d;
+    --note-placeholder: 216 12% 84%; /* hsl(216 12% 84%) */
+
+    --note-default-opacity: #0f172a80;
+    --note-indigo-opacity: #312e8180;
+    --note-emerald-opacity: #064e3b80;
+    --note-amber-opacity: #78350f80;
+    --note-red-opacity: #7f1d1d80;
+
+    --node-selected: 234 89% 74%;
+
+    --ice: #60a5fa;
+    --hover: #1a202e;
+    --disabled-run: #6366f1;
+    --selected: #0369a1;
+
+    --filter-foreground: #eef2ff;
+    --filter-background: #4e46e599;
+
+    --round-btn-shadow: #00000063;
+
+    --success-background: #022c22;
+    --success-foreground: #ecfdf5;
+
+    --error-foreground: #fef2f2;
+    --error-background: #450a0a;
+    --error: #991b1b;
+
+    --info-foreground: #eff6ff;
+    --info-background: #172554;
+
+    --high-indigo: #4338ca;
+    --medium-indigo: #6366f1;
+    --low-indigo: #e0e7ff;
+
+    --component-icon: #c35f85;
+    --flow-icon: #2467e4;
+
+    /* Colors that are shared in dark and light mode */
+    --blur-shared: #151923d2;
+    --build-trigger: #dc735b;
+    --chat-trigger: #5c8be1;
+    --chat-trigger-disabled: #2d3b54;
+    --status-red: #ef4444;
+    --status-yellow: #eab308;
+    --chat-send: #ffffff;
+    --status-green: #4ade80;
+    --status-blue: #2563eb;
+    --connection: #6d6c6c;
+
+    --beta-background: rgb(37 99 235);
+    --beta-foreground: rgb(219 234 254);
+    --beta-foreground-soft: rgb(219 234 254);
+
+    --chat-bot-icon: #235d70;
+    --chat-user-icon: #4f3d6e;
+  }
+}

@@ -1,0 +1,17 @@
+const AstraSVG = (props) => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect width="100%" height="100%" rx="4" fill="backgroundColor" />
+    <path
+      d="M6.89209 5.76894L5 10.8265H6.56835L8 6.4524L9.43165 10.8265H11L9.10791 5.76894C8.71942 4.76175 7.29496 4.72578 6.89209 5.76894Z"
+      fill="currentColor"
+    />
+  </svg>
+);
+export default AstraSVG;
